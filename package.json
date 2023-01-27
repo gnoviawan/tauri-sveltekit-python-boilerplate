@@ -1,0 +1,30 @@
+{
+  "name": "tauri-sveltekit-python-boilerplate",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+		"tauri:dev": "npm run tauri dev",
+		"tauri:build": "npm run tauri build",
+		"kit:dev": "vite dev",
+		"kit:build": "vite build",
+		"python:build": "conda activate python-api & pyinstaller --workpath=src-python/build --distpath=src-python/dist pyinstaller.spec --upx-dir=.",
+		"preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.2.0"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "next",
+    "@sveltejs/adapter-static": "next",
+    "svelte": "^3.54.0",
+    "svelte-check": "^3.0.0",
+    "@tauri-apps/cli": "^1.2.2",
+    "tslib": "^2.4.1",
+    "typescript": "^4.8.4",
+    "vite": "^4.0.0"
+  }
+}
